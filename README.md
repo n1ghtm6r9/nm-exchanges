@@ -1,1 +1,1 @@
-# nm-exchanges
+# nm-config

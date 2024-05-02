@@ -1,0 +1,4 @@
+import { MarketDataStreamRequestDataOrderBookMethodDto } from './MarketDataStreamRequestDataOrderBookMethodDto';
+import { MarketDataStreamRequestDataAggregateTradeMethodDto } from './MarketDataStreamRequestDataAggregateTradeMethodDto';
+
+export type MarketDataStreamRequestMethodDto = MarketDataStreamRequestDataOrderBookMethodDto | MarketDataStreamRequestDataAggregateTradeMethodDto;

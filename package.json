@@ -1,0 +1,39 @@
+{
+  "name": "@nmxjs/exchanges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "echo [@nmxjs/config has no start script]",
+    "clear": "rm -rf dist",
+    "build": "yarn clear; tsc",
+    "test": "jest --config=jest.config.js --runInBand --passWithNoTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n1ghtm6r9/nm-config.git"
+  },
+  "keywords": [],
+  "author": "N1ghtm6r9",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n1ghtm6r9/nm-config/issues"
+  },
+  "homepage": "https://github.com/n1ghtm6r9/nm-config#readme",
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@nmxjs/http": "^1.0.9",
+    "@nmxjs/ws": "^1.0.5",
+    "crypto-js": "^4.2.0",
+    "object-hash": "^3.0.0",
+    "qs": "^6.12.1"
+  },
+  "peerDependencies": {
+    "@nmxjs/validation": "^1.0.29",
+    "@nmxjs/types": "^1.0.15"
+  }
+}
