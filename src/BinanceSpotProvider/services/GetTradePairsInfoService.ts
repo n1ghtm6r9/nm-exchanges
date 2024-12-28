@@ -73,7 +73,7 @@ export class GetTradePairsInfoService {
         : [],
     ]).then(([tradePairsInfo, commissions, crossMarginData, depositWithdrawInfos]) => ({
       data: tradePairsInfo
-        .filter(s => s.status === 'TRADING' && s.permissions.includes('SPOT'))
+        .filter(s => s.status === 'TRADING' && (!s.permissions.length || s.permissions.includes('SPOT')))
         .map((tradePairInfo): GetTradePairInfoResponseDto => {
           const commission = commissions.find(v => v.symbol === tradePairInfo.symbol);
           const depositWithdrawInfo = depositWithdrawInfos.find(v => v.coin === tradePairInfo.baseAsset)?.networkList || [];
