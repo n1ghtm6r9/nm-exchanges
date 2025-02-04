@@ -17,12 +17,12 @@ export class GetFundingDataService {
         ...(typeof options.startTime === 'number' ? { startTime: options.startTime } : {}),
         ...(typeof options.endTime === 'number' ? { endTime: options.endTime } : {}),
         ...(options.limit ? { limit: options.limit } : {}),
-      })}`
+      })}`,
     )
       .then(async res => {
         const data = await res.json();
 
-        if (res.statusText !== 'OK') {
+        if (res.status !== 200) {
           throw new Error(data.msg);
         }
 
