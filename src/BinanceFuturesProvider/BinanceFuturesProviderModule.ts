@@ -26,7 +26,7 @@ import * as Services from './services';
 
             if (secretKey && securityType === ExchangeSecurityTypeEnum.FULL) {
               query.timestamp = Date.now();
-              query.recvWindow = 30000;
+              query.recvWindow = 5000;
               query.signature = crypto
                 .createHmac('sha256', <string>secretKey)
                 .update(objToQs({ obj: query }))
@@ -60,7 +60,7 @@ import * as Services from './services';
         getTradePairsInfoService: Services.GetTradePairsInfoService,
         accountDataStreamService: Services.AccountDataStreamService,
         updateTradingMultiplierService: Services.UpdateTradingMultiplierService,
-        getFundingDataService: Services.GetFundingDataService
+        getFundingDataService: Services.GetFundingDataService,
       ): IExchangeProviderMethods => ({
         getBalance: getBalanceService.call.bind(getBalanceService),
         cancelOrder: cancelOrderService.call.bind(cancelOrderService),
