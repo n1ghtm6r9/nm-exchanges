@@ -44,7 +44,7 @@ export class AccountDataStreamService extends BaseStreamService<AccountDataStrea
             })
             .then(res => `wss://fstream.binance.com/ws/${res.data.listenKey}`)
             .catch(async () => {
-              await sleep({ time: 1000 });
+              await sleep(1000);
               return null;
             });
 

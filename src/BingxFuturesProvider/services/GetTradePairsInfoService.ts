@@ -64,7 +64,7 @@ export class GetTradePairsInfoService {
         },
       });
 
-      await sleep({ time: 101 });
+      await sleep(101);
     }
 
     return {

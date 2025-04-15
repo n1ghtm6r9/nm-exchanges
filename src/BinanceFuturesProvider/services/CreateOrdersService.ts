@@ -62,12 +62,12 @@ export class CreateOrdersService {
             return {
               exchangeOrderId: data.orderId.toString(),
               price: data.fills?.length
-                ? calcAvgPrice({
-                    data: data.fills.map(v => ({
+                ? calcAvgPrice(
+                    data.fills.map(v => ({
                       price: parseFloat(v.price),
                       amount: parseFloat(v.qty),
                     })),
-                  })
+                  )
                 : parseFloat(data.price) || parseFloat(price),
               immediatelyError,
             };

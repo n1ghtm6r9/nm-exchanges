@@ -59,12 +59,12 @@ export class CreateOrdersService {
           .then(res => ({
             exchangeOrderId: res.data.orderId.toString(),
             price: res.data.fills?.length
-              ? calcAvgPrice({
-                  data: res.data.fills.map(v => ({
+              ? calcAvgPrice(
+                  res.data.fills.map(v => ({
                     price: parseFloat(v.price),
                     amount: parseFloat(v.qty),
                   })),
-                })
+                )
               : parseFloat(res.data.price),
           }));
       }),

@@ -51,7 +51,7 @@ export class GetTradePairsInfoService {
                 },
               })
               .then(async res => {
-                await sleep({ time: 101 });
+                await sleep(101);
                 return res.data.data[0];
               })
           : marginTradePair && marginTradePair.maxIsolatedLeverage !== '0'
@@ -63,7 +63,7 @@ export class GetTradePairsInfoService {
                 },
               })
               .then(async res => {
-                await sleep({ time: 101 });
+                await sleep(101);
                 return res.data.data[0];
               })
           : undefined;
