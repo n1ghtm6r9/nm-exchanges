@@ -29,7 +29,7 @@ import * as Services from './services';
               query.recvWindow = 5000;
               query.signature = crypto
                 .createHmac('sha256', <string>secretKey)
-                .update(objToQs({ obj: query }))
+                .update(objToQs(query))
                 .digest('hex');
             }
             return {

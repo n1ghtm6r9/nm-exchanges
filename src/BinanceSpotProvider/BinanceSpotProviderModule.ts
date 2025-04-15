@@ -28,7 +28,7 @@ import * as Services from './services';
               query.timestamp = Date.now();
               query.signature = crypto
                 .createHmac('sha256', <string>secretKey)
-                .update(objToQs({ obj: query }))
+                .update(objToQs(query))
                 .digest('hex');
             }
 
@@ -59,7 +59,7 @@ import * as Services from './services';
         getTradePairInfoService: Services.GetTradePairInfoService,
         getTradePairsInfoService: Services.GetTradePairsInfoService,
         accountDataStreamService: Services.AccountDataStreamService,
-        updateTradingMultiplierService: Services.UpdateTradingMultiplierService
+        updateTradingMultiplierService: Services.UpdateTradingMultiplierService,
       ): IExchangeProviderMethods => ({
         getBalance: getBalanceService.call.bind(getBalanceService),
         cancelOrder: cancelOrderService.call.bind(cancelOrderService),

@@ -1,6 +1,4 @@
-import * as crypto from 'crypto';
 import { Module } from '@nestjs/common';
-import { objToQs } from '@nmxjs/utils';
 import { httpClientKey, IHttpClient } from '@nmxjs/http';
 import { externalProxyServiceKey, IExchangeProviderMethods, IExternalProxyService, ExchangeSecurityTypeEnum } from '../ExchangesProvider';
 import { bingxFuturesHttpProviderKey, bingxFuturesProviderKey, bingxFuturesApiUrl } from './constants';
@@ -47,7 +45,7 @@ import * as Services from './services';
         getTradePairInfoService: Services.GetTradePairInfoService,
         getTradePairsInfoService: Services.GetTradePairsInfoService,
         accountDataStreamService: Services.AccountDataStreamService,
-        updateTradingMultiplierService: Services.UpdateTradingMultiplierService
+        updateTradingMultiplierService: Services.UpdateTradingMultiplierService,
       ): IExchangeProviderMethods => ({
         getBalance: getBalanceService.call.bind(getBalanceService),
         cancelOrder: cancelOrderService.call.bind(cancelOrderService),

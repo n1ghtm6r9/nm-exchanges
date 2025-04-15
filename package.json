@@ -1,6 +1,6 @@
 {
   "name": "@nmxjs/exchanges",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -27,13 +27,14 @@
   },
   "dependencies": {
     "@nmxjs/http": "^1.0.9",
+    "@nmxjs/utils": "^1.1.3",
     "@nmxjs/ws": "^1.0.5",
     "crypto-js": "^4.2.0",
     "object-hash": "^3.0.0",
     "qs": "^6.12.1"
   },
   "peerDependencies": {
-    "@nmxjs/validation": "^1.0.29",
-    "@nmxjs/types": "^1.0.15"
+    "@nmxjs/types": "^1.0.15",
+    "@nmxjs/validation": "^1.0.29"
   }
 }
